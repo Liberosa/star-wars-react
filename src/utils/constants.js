@@ -9,7 +9,6 @@ import friend8 from "../assets/friend8.jpg";
 import friend9 from "../assets/friend9.jpg";
 
 export const baseUrl='https://sw-info-api.herokuapp.com';
-export const peopleUrl = 'https://sw-info-api.herokuapp.com/v1/peoples';
 export const navItems = ['Home', 'About me', 'Star Wars', 'Contact'];
 export const openingCrawl = `It is a period of civil war.
                 Rebel spaceships, striking

@@ -1,10 +1,10 @@
-import {useState, useEffect} from 'react';
-import {peopleUrl} from "../utils/constants.js";
+import {useEffect, useState} from 'react';
+import {baseUrl} from "../utils/constants.js";
 
 export const AboutMe = () => {
     const [userData, setUserData] = useState(null);
     useEffect(() => {
-        fetch(`${peopleUrl}/1`)
+        fetch(`${baseUrl}/v1/peoples/1`)
             .then(res => res.json())
             .then(data => {
                 setUserData(data);

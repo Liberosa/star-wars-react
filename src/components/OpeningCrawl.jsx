@@ -10,11 +10,11 @@ const OpeningCrawl = () => {
             .then(data => setOpeningCrawl(data.opening_crawl));
     }, [])
     return (
-        <p className="farGalaxy">{openingCrawl ? openingCrawl :
+        <div className="farGalaxy">{openingCrawl ? openingCrawl :
             <div className="spinner-border text-warning" role="status">
                 <span className="visually-hidden">Loading...</span>
             </div>}
-        </p>
+        </div>
     );
 };
 
