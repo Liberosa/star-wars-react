@@ -16,7 +16,7 @@ export const Contact = () => {
             setPlanetData(payload);
             localStorage.setItem("planets", JSON.stringify(payload));
         } catch (error) {
-            console.error("Ошибка загрузки данных о планетах:", error);
+            console.error("Planet data downloading error:", error);
         }
     }
 
@@ -24,7 +24,7 @@ export const Contact = () => {
     useEffect(() => {
         const stored = JSON.parse(localStorage.getItem("planets"));
         if (stored) {
-            const isExpired = stored.expirationTime && stored.timestamp < Date.now();
+            const isExpired = stored.expirationTime < Date.now();
             if (isExpired) {
                 localStorage.removeItem("planets");
                 fetchPlanetData();
